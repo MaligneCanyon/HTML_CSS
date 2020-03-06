@@ -1,0 +1,14 @@
+1.
+semantic: all except span and div
+
+2.
+depends on context and intent, but likely article; this is a self-contained article about an address
+
+3.
+article and/or blockquote
+
+4.
+section or div
+
+5.
+aside

@@ -1,0 +1,4 @@
+6.
+- a <div> uses (and all other elems use)
+  box-sizing: content-box;
+by default, which adds to the rendered width (and height) of the elem

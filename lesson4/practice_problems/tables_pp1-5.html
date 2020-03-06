@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>...</title>
+    <meta charset="utf-8" />
+    <!-- links -->
+    <!-- <link rel="stylesheet" href="filename.css" /> -->
+
+    <!-- internal css -->
+    <style>
+      table {
+        background-color: cyan; /*pp2*/
+        border-spacing: 0; /*pp4*/ /*'border-collapse: collapse;' also works*/
+      }
+
+      /*pp3 and pp5i*/
+      /*
+      td {
+        background-color: orange;
+      }
+      */
+
+      /*pp5i*/
+      /*
+      .even-row td {
+        background-color: yellow;
+      }
+      */
+
+      /*pp5ii*/
+      tbody tr:nth-of-type(even) {
+        background-color: yellow;
+      }
+      tbody tr:nth-of-type(odd) {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- all visible content -->
+    <table>
+      <thead>
+        <tr> <!-- the tbl header is also considered to be a row -->
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apple</td>
+          <td>34</td>
+          <td>$3.99/lb</td>
+        </tr>
+        <!-- <tr> -->
+        <tr class="even-row"> <!-- pp5i -->
+          <td>Banana</td>
+          <td>116</td>
+          <td>$1.69/lb</td>
+        </tr>
+        <tr>
+          <td>Carrot</td>
+          <td>42</td>
+          <td>$2.49/lb</td>
+        </tr>
+        <!-- <tr> -->
+        <tr class="even-row"> <!-- pp5i -->
+          <td>Kiwi</td>
+          <td>18</td>
+          <td>$0.69 ea.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+1.
+- img
+display = inline-block
+box-sizing = content-box
+rendered width  = 500 + 40 (padding) + 8 (border) + 30 (margin) = 578
+rendered height = 300 + 20 (padding) + 8 (border) + 30 (margin) = 358
+- because the div uses border-box sizing, must add 2px for its border, so
+div width  = 580
+div height = 360
+
+2.
+- section
+display = block
+- from the posted solution,
+"Since the section element is a block element" ...
+"other elements may appear adjacent to the img in problem 1, while the section in this problem will always be on a line by itself within the div no matter its width."
+
+3.
+- em
+display = inline
+- since the em elem is inline, the div only needs to be large enough to contain the
+  - content
+  - padding and border
+  - left and right margins
+of the em, plus 2px height and width for its own border
+
+4.
+- article
+display = inline-block
+box-sizing = border-box
+- since the padding and border of the article are contained w/i its spec'd size, its
+rendered width  = 500 + 30 (margin) = 530
+rendered height = 300 + 30 (margin) = 330
+- because the div uses border-box sizing, must add 2px for its border, so
+div width  = 532
+div height = 332
+
+5.
+i. no; block elems always appear on their own line
+ii. yes; rendered width for the tags is AT MOST 360px, since both use border-box and their margin is 0, so they can be contained within the div's 720px width
+iii. yes; will behave as per ii, since horiz space is avail
+iv. no; as per i
+v. no; as per i
+vi. yes; the inline-block elem will behave as per an inline elem, since horiz space is avail
+
+6.
+- the article will inherit the content-box sizing of its parent unless otherwise spec'd
+- since its width is spec'd at 50%, the additional space needed for its padding and border will exceed the avail width of the div when placed w/ another article of the same type
+- to fix, spec
+box-sizing: border-box
+display: inline-block
+
+7.
+- makes no difference ?
+- the 2 articles are still both located w/i the same section
+- from the solution, the whitespace between the 2 lines is perceived as a single char, which takes up space (thus exceeding the 100% width of the section elem)
+- so the articles cannot appear on the same line

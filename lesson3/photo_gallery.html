@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>A Simple Photo Gallery</title>
+    <meta charset="utf-8" />
+    <!-- links -->
+    <!-- <link rel="stylesheet" href="stylesheet.css" /> -->
+
+    <!-- internal css -->
+    <style>
+      /*prescribed reset*/
+      /*zero out margins and padding to ensure that the appearance remains similar in dif browsers*/
+      body, main, figure, figcaption, img {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-image: url(https://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/gradient-background.png); /*step10*/
+        background-size: cover; /*step10*/
+      }
+
+      figure {
+        /*margin: 50px;*/ /*step1*/
+        /*outline: 1px solid red;*/ /*step1*/ /*step10*/
+        width: 50%; /*step4*/
+        display: inline-block; /*step5*/
+        box-sizing: border-box; /*step7*/
+        padding: 0 50px; /*step7*/
+        margin: 50px 0; /*step7*/
+      }
+
+      figcaption {
+        text-align: center; /*step6*/
+      }
+
+      img {
+        /*max-width: 100%;*/ /*step2: set max width of widest image to 100% of browser width, minus margins*/
+        width: 100%; /*step3: this also works, but expands smaller images*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- all visible content -->
+    <main>
+      <figure>
+        <!-- Transit Shadows --> <!-- this also provides a caption, placing the content before the image -->
+        <a href="https://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/1.jpg"
+           target="_blank"> <!-- step9: convert images to links -->
+          <img src="https://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/1.jpg"
+               alt="Transit Shadows" />
+        </a>
+        <figcaption>Transit Shadows</figcaption>
+      </figure><figure> <!-- step5: remove whitespace btwn 'figure' elems -->
+        <a href="https://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/2.jpg"
+           target="_blank">
+          <img src="https://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/2.jpg"
+               alt="Missy Chaplin" />
+        </a>
+        <figcaption>Missy Chaplin</figcaption>
+      </figure><figure>
+        <a href="https://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/3.jpg"
+           target="_blank">
+          <img src="https://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/3.jpg"
+               alt="Thunderbirds in Formation" />
+        </a>
+        <figcaption>Thunderbirds in Formation</figcaption>
+      </figure><figure>
+        <a href="https://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/4.jpg"
+           target="_blank">
+          <img src="https://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/4.jpg"
+               alt="Orange Rose" />
+        </a>
+        <figcaption>Orange Rose</figcaption>
+      </figure><figure>
+        <a href="https://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/5.jpg"
+           target="_blank">
+          <img src="https://d3jtzah944tvom.cloudfront.net/202/images/lesson_3/photo-gallery/5.jpg"
+               alt="Kentucky Darleks" />
+        </a>
+        <figcaption>Kentucky Darleks</figcaption>
+      </figure>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+/*Firebox treats <input> and <textarea> as 'inline' elems by default;*/
+/*use 'inline-block' instead, as per Chrome/Safari/others*/
+input, textarea {
+  display: inline-block;
+}
+
+
+/*use 'border-box' for box sizing*/
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}

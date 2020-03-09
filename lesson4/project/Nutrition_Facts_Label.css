@@ -1,14 +1,7 @@
-/*Firebox treats <input> and <textarea> as 'inline' elems by default;*/
-/*use 'inline-block' instead, as per Chrome/Safari/others*/
-input, textarea {
-  display: inline-block;
-}
-
-
 /*use 'border-box' for box sizing*/
 html {
   box-sizing: border-box;
-  font-size: 28px;
+  font-size: 28px; /*root font size*/
 }
 *, *::before, *::after {
   box-sizing: inherit;
@@ -16,13 +9,15 @@ html {
 
 
 /*
-- use Franklin Gothic Heavy for the main heading,
+use Franklin Gothic Heavy for the main heading,
 and Helvetica Black and Helvetica for the remaining fonts
-- use 28px for the root font size
 */
+
+/*
 * {
-/*outline: 1px solid red;*/
+outline: 1px solid red;
 }
+*/
 
 body {
   width: 684px;
@@ -34,22 +29,26 @@ body {
 /*headings*/
 h1, h3, h5 {
   margin: 0;
-  margin: 0;
+}
+
+h3, h5 {
+  font-size: 1.0rem;
+  padding: 5px 0;
 }
 
 h1 {
-  font-size: 3.4rem;
-  /*font-family: "Franklin Gothic Heavy", Arial, sans-serif;*/
-  font-family: Courier, Arial, sans-serif;
+  font-size: 2.9rem;
+  font-family: "Franklin Gothic Heavy", /*Arial,*/ sans-serif;
 }
 
 h3 {
-  font-size: 1.0rem;
+  margin-top: 5px;
+  border-top: 20px solid black;
 }
 
 h5 {
-  font-size: 0.8rem;
   text-align: right;
+  border-top: 10px solid black;
   border-bottom: 1px solid grey;
 }
 
@@ -57,7 +56,6 @@ h5 {
 /*unordered lists*/
 ul {
   list-style-type: none; /*no bullets*/
-  border-bottom: 10px solid black;
   margin: 0;
   padding-left: 0; /*no indentation*/
 }
@@ -65,6 +63,17 @@ ul {
 li {
   margin: 0;
   font-size: 1.2rem;
+}
+
+ul:last-of-type {
+  list-style-type: "*";
+  margin: 10px 0;
+  padding-left: 10px;
+}
+
+ul:last-of-type li {
+  padding-left: 10px;
+  font-size: 0.95rem;
 }
 
 
@@ -75,7 +84,7 @@ dl {
 
 dt {
   display: inline;
-  background-color: lightblue;
+  /*background-color: lightblue;*/
   font-weight: bold;
 }
 
@@ -86,7 +95,7 @@ td:nth-of-type(1) dl dd {
 dd {
   display: inline;
   margin-left: 0;
-  background-color: lightgreen;
+  /*background-color: lightgreen;*/
 }
 
 
@@ -102,7 +111,9 @@ table:nth-of-type(1) {
 
 table:nth-of-type(3),
 table:nth-of-type(7) {
-  padding-left: 50px;
+  margin-left: 5%;
+  width: 95%;
+  border-collapse: collapse;
 }
 
 table:nth-of-type(2),
@@ -115,12 +126,14 @@ table:nth-of-type(3) tr:last-of-type td,
 table:nth-of-type(4),
 table:nth-of-type(5),
 table:nth-of-type(6),
-table:nth-of-type(7) tr:last-of-type td {
+table:nth-of-type(7) tr:last-of-type td,
+table:nth-of-type(9) td,
+table:last-of-type thead th {
   border-bottom: 1px solid gray;
 }
 
 table:nth-of-type(8) {
-  border-bottom: 10px solid black;
+  border-bottom: 20px solid black;
 }
 
 td {
@@ -129,4 +142,27 @@ td {
 
 td:nth-of-type(2) {
   text-align: right;
+}
+
+table:last-of-type {
+  padding: 5px 0;
+  border-collapse: collapse;
+}
+
+table:last-of-type th,
+table:last-of-type td {
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: normal;
+}
+
+table:last-of-type thead tr th,
+table:last-of-type td {
+  padding-left: 0.8rem;
+}
+
+/*could use a class as the selector here:*/
+table:last-of-type tbody tr:nth-of-type(2) th,
+table:last-of-type tbody tr:last-of-type th {
+  text-indent: 30px;
 }

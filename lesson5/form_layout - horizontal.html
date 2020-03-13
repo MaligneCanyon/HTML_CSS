@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form Layouts</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        font: normal 14px Helvetica, Arial, san-serif; /*'normal' refs font-weight*/
+      }
+      label {
+        box-sizing: border-box; /*no horiz scroll bar when using width: 100%*/
+        /*width: 90px;*/ /* fixed-width allows input fields to line-up horizontally*/
+        width: 10%; /* percent-width allows input fields to line-up horizontally but label text may break to multiple lines if compressed*/
+        display: inline-block; /*orient horizontally wrt input field (left-to-right layout)*/
+        padding-right: 20px;
+        vertical-align: middle;
+      }
+      input[type="text"] {
+        box-sizing: border-box; /*no horiz scroll bar when using width: 100%*/
+        width: 90%; /* percent-width allows input fields to line-up horizontally but label text may break to multiple lines if compressed*/
+        height: 40px;
+        padding: 0 8px; /*padding of text w/i the input field*/
+        font: normal 14px Helvetica, Arial, san-serif;
+        border-radius: 4px;
+        border: 1px solid #cecece;
+      }
+      .row {
+        padding-bottom: 20px; /*to sep rows*/
+      }
+    </style>
+  </head>
+  <body>
+
+    <form action="" method="post">
+      <div class="row">
+        <label for="name">Your Name</label><!-- remove whitespace btwn elems
+        --><input type="text" name="name" id="name" />
+      </div>
+      <div class="row">
+        <label for="address">Address</label><!-- remove whitespace btwn elems
+        --><input type="text" name="address" id="address" />
+      </div>
+    </form>
+  </body>
+</html>

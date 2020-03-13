@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form Layouts</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        font: normal 14px Helvetica, Arial, san-serif; /*'normal' refs font-weight*/
+      }
+      dl {
+        margin: 0;
+        padding-bottom: 20px; /*to separate rows*/
+      }
+      dt {
+        padding-bottom: 10px;
+        vertical-align: middle;
+        box-sizing: border-box;
+      }
+      dd {
+        padding-bottom: 20px; /*to separate rows*/
+        margin: 0; /*remove indentation*/
+      }
+      input[type="text"] {
+        box-sizing: border-box; /*no horiz scroll bar when using width: 100%*/
+        width: 100%;
+        height: 40px;
+        padding: 0 8px; /*padding of text w/i the input field*/
+        font: normal 14px Helvetica, Arial, san-serif;
+        border-radius: 4px;
+        border: 1px solid #cecece;
+      }
+      input[type="text"] + input[type="text"] { /*adjacent siblings*/
+        margin-top: 10px; /*add space btwn adjacent inputs*/
+      }
+      dl.partial-row {
+        display: inline-block;
+        box-sizing: border-box;
+      }
+      dl.city {
+        width: 50%;
+        padding-right: 20px;
+      }
+      dl.prov {
+        width: 25%;
+        padding-right: 20px;
+      }
+      dl.pcode {
+        width: 25%;
+      }
+      select { /*style 'select' boxes as per text inputs*/
+        width: 100%;
+        height: 40px;
+        padding: 0 8px;
+        font: normal 14px Helvetica, Arial, san-serif;
+        -webkit-appearance: none; /*add support for specific browsers*/
+        -moz-appearance: none; /*add support for specific browsers*/
+        appearance: none;
+        background-color: white;
+        border-radius: 4px;
+        border: 1px solid #cecece;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+
+    <form action="" method="post">
+      <dl>
+        <dt>
+          <label for="name">Your Name</label>
+        </dt>
+        <dd>
+          <input type="text" name="name" id="name" />
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <label for="address">Address</label>
+        </dt>
+        <dd>
+          <input type="text" name="address" id="address" />
+          <input type="text" name="address2" />
+        </dd>
+      </dl>
+      <dl class="partial-row city">
+        <dt>
+          <label for="city">City</label>
+        </dt>
+        <dd>
+          <input type="text" name="city" id="city" />
+        </dd>
+      </dl><!--
+      --><dl class="partial-row prov">
+        <dt>
+          <label for="prov">Province</label>
+        </dt>
+        <dd>
+          <select id="prov" name="prov"> <!-- use a 'select' box -->
+            <option>BC</option>
+            <option>AB</option>
+            <option>ON</option>
+          </select>
+        </dd>
+      </dl><!--
+      --><dl class="partial-row pcode">
+        <dt>
+          <label for="pcode">Postal Code</label>
+        </dt>
+        <dd>
+          <input type="text" name="pcode" id="pcode" />
+        </dd>
+      </dl>
+    </form>
+  </body>
+</html>

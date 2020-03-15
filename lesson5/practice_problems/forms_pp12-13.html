@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>pp12-13</title>
+    <meta charset="utf-8" />
+    <!-- internal css -->
+    <style>
+      dt { /*sim styling to the h3 headings in pp11*/
+        font-weight: 600;
+        font-size: 1.15rem;
+        margin-bottom: 20px;
+      }
+    </style>
+  <body>
+    <!-- all visible content -->
+    <form action="#" method="get"> <!-- use a get req for searches -->
+      <fieldset>
+        <!-- <h3>Category</h3> -->
+        <dl>
+          <!-- Core, Plugins and Libraries, Conventions, Reviews, Opinion, People -->
+
+          <dt><label for="category">Category</label></dt>
+          <dd>
+            <select name="category" id="category" size="4">
+              <option>Core</option>
+              <option>Plugins and Libraries</option>
+              <option>Conventions</option>
+              <option>Reviews</option>
+              <option>Opinion</option>
+              <option>People</option>
+            </select>
+          </dd>
+        </dl>
+
+        <!-- <h3>Tag</h3> -->
+        <dl>
+          <!-- HTML, CSS, Javascript, Ruby, Rails, Python, Django -->
+          <dt><label for="tag">Tag</label></dt>
+          <dd>
+            <select name="tag" id="tag" multiple size="4">
+              <option>HTML</option>
+              <option>CSS</option>
+              <option>Javascript</option>
+              <option>Ruby</option>
+              <option>Rails</option>
+              <option>Python</option>
+              <option>Django</option>
+            </select>
+          </dd>
+        </dl>
+
+        <!-- <button>Filter</button> -->
+        <input type="submit" value="Filter" />
+        <input type="reset"  value="Clear Form" /> <!-- 'value' attrib is optional -->
+      </fieldset>
+    </form>
+  </body>
+</html>

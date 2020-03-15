@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>pp5-6</title>
+    <meta charset="utf-8" />
+    <!-- internal css -->
+    <style>
+      label {
+        /*display: block;*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- all visible content -->
+    <form action="#" method="post">
+      <fieldset>
+        <dl>
+          <dt><label for="fname">First Name</label><dt>
+          <!-- <dt>First Name</dt> this sortof works too -->
+          <dd><input type="text" name="fname" id="fname" required /></dd>
+
+          <dt><label for="lname">Last Name</label></dt>
+          <dd><input type="text" name="lname" id="lname" required /></dd>
+
+          <dt><label for="email">Email Address</label></dt>
+          <dd><input type="email" name="email" id="email" required /></dd>
+            <!-- autocapitalize="none" autocomplete="off" autocorrect="off" /></dd> -->
+
+          <dt><label for="phone-type">Phone Type</label></dt>
+          <dd>
+            <select name="phone-type" id="phone-type">
+              <option value="home" selected>Home</option>
+              <option value="business">Business</option>
+              <option value="mobile">Mobile</option>
+            </select>
+          </dd>
+
+          <dt><label for="phone">Phone Number</label></dt>
+          <dd><input type="tel" name="phone" id="phone" placeholder="###-###-####" required /></dd>
+
+          <dt><label for="msg-box">Message Box</label></dt>
+          <dd>
+            <textarea name="msg-box" id="msg-box" rows="6" cols="80" placeholder="Type your message here."></textarea>
+          </dd>
+        </dl>
+      </fieldset>
+
+      <input type="submit" value="Send" />
+    </form>
+  </body>
+</html>

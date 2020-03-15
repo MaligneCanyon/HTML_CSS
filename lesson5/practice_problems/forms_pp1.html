@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>pp1</title>
+    <meta charset="utf-8" />
+    <!-- internal css -->
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- all visible content -->
+    <form action="#" method="post">
+      <fieldset>
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname" required />
+
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" id="lname" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" required />
+          <!-- autocapitalize="none" autocomplete="off" autocorrect="off" /> -->
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone" required />
+      </fieldset>
+
+      <input type="submit" value="Send" />
+    </form>
+  </body>
+</html>

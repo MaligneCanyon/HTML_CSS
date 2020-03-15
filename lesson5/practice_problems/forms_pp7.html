@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>pp7</title>
+    <meta charset="utf-8" />
+    <!-- internal css -->
+    <style>
+      label {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- all visible content -->
+    <form action="#" method="get"> <!-- use a get req for searches -->
+      <fieldset>
+        <label for="term">Search for</label>
+        <input type="search" name="term" id="term" />
+
+        <label>
+          <input type="radio" name="media" value="tv" required />
+          TV
+        </label>
+        <label>
+          <input type="radio" name="media" value="movies" required />
+          Movies
+        </label>
+        <label>
+          <input type="radio" name="media" value="music" required />
+          Music
+        </label>
+
+        <button>Search</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>contact form</title>
+    <meta charset="utf-8" />
+    <!-- internal css -->
+    <style>
+      /*resets*/
+      /*textarea,*/
+      input {
+        display: inline-block;
+      }
+      html {
+        box-sizing: border-box;
+      }
+      *, *::before, *::after {
+        box-sizing: inherit;
+        margin: 0; /*start clean*/
+        padding: 0; /*start clean*/
+        /*no need to worry about indentation if you start clean !*/
+      }
+      fieldset {
+        margin: 0 auto; /*r&l auto margin horiz'ly centers the fieldset*/
+        width: 600px; /*fixed width*/
+        border: none;
+        /*background-color: yellow;*/ /*for testing*/
+      }
+
+      /*general*/
+      body {
+        font: normal 16px Hevetica, Arial, sans-serif;
+      }
+
+      /*lists*/
+      li:first-of-type {
+        padding-top: 5px;
+      }
+      li:last-of-type {
+        padding-bottom: 5px;
+      }
+      ul {
+        list-style-type: none; /*no bullets*/
+      }
+      dl {
+        margin-bottom: 15px;
+        /*background-color: lightblue;*/ /*for testing*/
+      }
+      dl:last-of-type {
+        margin-bottom: 0;
+      }
+      dd {
+        padding-top: 5px;
+      }
+      dd > input {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /*radio buttons*/
+      [type="radio"] {
+        margin-bottom: 10px;
+        width: auto;
+      }
+      [for="red"] {
+        color: red;
+      }
+      [for="green"] {
+        color: green;
+      }
+      [for="blue"] {
+        color: blue;
+      }
+
+      /*misc input fields*/
+      /*
+      note: using '.std' raises specificity, it may be better to use
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+      although it complicates the styling of 'select'
+      */
+      .std {
+        box-sizing: border-box; /*no horiz scroll bar when using 'width: 100%'*/
+        width: 100%;
+        height: 40px;
+        padding: 0 8px; /*padding of text w/i the input field*/
+        font: normal 14px Helvetica, Arial, san-serif;
+        border-radius: 6px;
+        border: 1px solid #cecece;
+      }
+      select { /*in addition to .std styling*/
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: white;
+      }
+      textarea.std  { /*in addition to '.std' styling (which has higher specificity than 'textarea' alone)*/
+        height: auto; /*allow 'rows' attrib to determine height*/
+        resize: vertical; /*allow vert (but not horiz) resizing*/
+      }
+      .partial {
+        display: inline-block;
+        box-sizing: border-box;
+      }
+      .fifty {
+        width: 50%;
+      }
+      .forty {
+        width: 40%;
+      }
+      .ten {
+        width: 10%;
+      }
+      .left {
+        padding-left: 5px;
+      }
+      .right {
+        padding-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- all visible content -->
+    <!-- <form action="#" method="get"> --> <!-- for testing only -->
+    <form action="#" method="post">
+      <fieldset>
+        <dl class="partial fifty right">
+          <dt><label for="fname">First Name</label></dt>
+          <dd><input class="std" type="text" name="fname" id="fname" required /></dd>
+        </dl><!--
+        --><dl class="partial fifty left">
+          <dt><label for="lname">Last Name</label></dt>
+          <dd><input class="std" type="text" name="lname" id="lname" required /></dd>
+        </dl>
+
+        <dl>
+          <dt><label for="email">Email Address</label></dt>
+          <dd><input class="std" type="email" name="email" id="email" required /></dd>
+            <!-- autocapitalize="none" autocomplete="off" autocorrect="off" /></dd> -->
+        </dl>
+
+        <dl class="partial fifty right">
+          <dt><label for="city">City</label></dt>
+          <dd><input class="std" type="text" name="city" id="city" required /></dd>
+        </dl><!--
+        --><dl class="partial ten left right">
+          <dt><label for="state">State</label></dt>
+          <dd>
+            <select class="std" name="state" id="state" required>
+              <option value="" disabled selected>**</option> <!-- need this or ... -->
+              <option>AK</option> <!-- ... 1st option is selected by default but validation fails -->
+              <option>AL</option>
+              <option>AR</option>
+              <option>AZ</option>
+              <option>CA</option>
+              <option>CO</option>
+              <option>CT</option>
+              <option>DC</option>
+              <option>DE</option>
+              <option>FL</option>
+              <option>GA</option>
+              <option>HI</option>
+              <option>IA</option>
+              <option>ID</option>
+              <option>IL</option>
+              <option>IN</option>
+              <option>KS</option>
+              <option>KY</option>
+              <option>LA</option>
+              <option>MA</option>
+              <option>MD</option>
+              <option>ME</option>
+              <option>MI</option>
+              <option>MN</option>
+              <option>MO</option>
+              <option>MS</option>
+              <option>MT</option>
+              <option>NC</option>
+              <option>ND</option>
+              <option>NE</option>
+              <option>NH</option>
+              <option>NJ</option>
+              <option>NM</option>
+              <option>NV</option>
+              <option>NY</option>
+              <option>OH</option>
+              <option>OK</option>
+              <option>OR</option>
+              <option>PA</option>
+              <option>RI</option>
+              <option>SC</option>
+              <option>SD</option>
+              <option>TN</option>
+              <option>TX</option>
+              <option>UT</option>
+              <option>VA</option>
+              <option>VT</option>
+              <option>WA</option>
+              <option>WI</option>
+              <option>WV</option>
+              <option>WY</option>
+            </select>
+          </dd>
+        </dl><!--
+        --><dl class="partial forty left">
+          <dt><label for="zipcode">Zip Code</label></dt>
+          <!--
+          <dd><input class="std" type="number" name="zipcode" id="zipcode" min="10000" max="99999" placeholder="#####" required /></dd>
+          -->
+          <dd><input class="std" type="text" name="zipcode" id="zipcode" pattern="[0-9]{5}" placeholder="#####" required /></dd>
+        </dl>
+
+        <dl>
+          <dt>Which of these colors do you like best?</dt>
+          <dd>
+            <input type="radio" name="color" value="red" id="red" checked>
+            <label for="red">Red</label>
+
+            <input type="radio" name="color" value="green" id="green">
+            <label for="green">Green</label>
+
+            <input type="radio" name="color" value="blue" id="blue">
+            <label for="blue">Blue</label>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt>Which web technologies do you want to learn?</dt>
+          <dd>
+            <ul>
+              <!-- HTML, CSS, Javascript, Ruby, Rails, Python, Django -->
+              <li>
+                <label>
+                  <input type="checkbox" name="html" />
+                  HTML
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="css" />
+                  CSS
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="js" />
+                  Javascript
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="ruby" />
+                  Ruby
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="rails" />
+                  Rails
+                </label>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+
+        <dl>
+          <dt><label for="comments">Comments</label></dt>
+          <dd>
+            <!-- <textarea name="comments" id="comments" rows="6" cols="80"></textarea> -->
+            <!-- textarea width is now set by styling -->
+            <!-- <textarea class="" name="comments" id="comments" rows="6" cols="80"></textarea> -->
+            <textarea class="std" name="comments" id="comments" rows="6"></textarea>
+          </dd>
+        </dl>
+
+        <input type="hidden" value="2020-03-15" name="timestamp"/>
+        <input type="submit" value="Send" />
+        <input type="reset" />
+      </fieldset>
+    </form>
+  </body>
+</html>

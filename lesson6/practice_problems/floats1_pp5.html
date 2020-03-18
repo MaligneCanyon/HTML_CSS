@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>...</title>
+    <meta charset="utf-8" />
+    <!-- links -->
+    <!-- <link rel="stylesheet" href="filename.css" /> -->
+
+    <!-- internal css -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #ccc; /*gray;*/
+      }
+      section {
+        margin: 0 auto;
+        /*width: 750px; pp3*/
+        max-width: 1000px; /*pp3*/
+        background-color: white;
+
+        /*pp2: floating elems makes it impossible to render their container height correctly w/o using 'overflow' or '::after' on the container*/
+        /*overflow: hidden;*/
+      }
+
+      /* pp5 clear the floats in the footer instead
+      section::after {
+        clear: both;
+        content: "";
+        display: block;
+      }
+      */
+
+      article, aside, footer {
+        box-sizing: border-box;
+        padding: 1rem;
+        /*float: left; pp3*/
+      }
+      article {
+        /*width: 500px; pp4*/
+        width: 70%; /*pp4*/
+        background-color: lightblue;
+        float: left; /*pp3*/
+      }
+      aside {
+        /*width: 250px; pp3*/
+        background-color: lightgreen;
+        float: none; /*pp3*/
+        overflow: hidden; /*pp3*/
+      }
+      footer {
+        background-color: orange; /*pp5*/
+        clear: both; /*pp5*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- all visible content -->
+    <section>
+      <article>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor molestie est, ac ultricies arcu fermentum non. In elementum nisl eget interdum hendrerit. Nam sit amet dolor porttitor, scelerisque libero vitae, aliquam metus. Sed pretium tincidunt tortor eget efficitur. Maecenas nec rutrum mi. Pellentesque interdum magna purus, sed lobortis turpis ullamcorper non. Sed venenatis augue ut risus luctus, id efficitur velit luctus. Praesent dignissim a neque ac varius. Aenean enim ipsum, eleifend vel dolor a, tincidunt tincidunt velit. Fusce egestas ex id consectetur sodales. Aliquam auctor, mi ut ultrices malesuada, enim ligula venenatis nisl, sit amet commodo diam lorem vitae nibh. Nam eget sem tortor. Nulla fringilla congue diam a posuere.
+      </article>
+
+      <aside>
+        Curabitur a velit in libero placerat dapibus ac nec lorem. Sed venenatis gravida tellus, a sodales diam sagittis at. Aenean odio nulla, condimentum sed erat dignissim, interdum congue dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nulla viverra, sollicitudin elit eu, fringilla velit. Donec hendrerit quam sit amet orci rutrum eleifend. Aliquam arcu leo, facilisis sed aliquam id, blandit eget est. Duis quis dictum risus. Pellentesque non nibh lectus. Fusce sed mi eros.
+      </aside>
+
+      <footer>
+        Aliquam tincidunt interdum pulvinar. In ligula augue, consequat in vulputate ac, dapibus sed libero. Cras interdum libero in rhoncus vestibulum. Aliquam aliquet neque eu leo ornare placerat.
+      </footer>
+    </section>
+  </body>
+</html>

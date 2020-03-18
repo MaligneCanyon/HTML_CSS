@@ -1,0 +1,62 @@
+1.
+-chg the CSS for the div's 'id'; there is no div CSS to alter directly
+
+#floated {
+    float: left;
+    background: #ecaa33;
+}
+.
+
+2.
+- since the div is floated, it is removed from the normal doc flow
+- add 'clear: both' to the main <p> elem to force it to appear below the div
+
+main > p {
+    padding: 1em;
+    margin: 0;
+    clear: both;
+}
+
+
+3.
+- set the width in the div's 'id' to 100%
+
+#floated {
+    width: 100%
+    float: left;
+    background: #ecaa33;
+}
+
+
+4.
+- need ~260px for the left margin
+- using 'margin-left: 20%' is much simpler
+- as mentioned in the solution, the following produces a 2-col layout:
+
+#floated {
+  width: 20%;
+}
+
+main > p {
+  /* clear: both; */
+  margin-left: 20%;
+}
+
+
+5.
+main > p {
+  /* margin-left: 20%; */
+  float: right;
+}
+
+- from the solution
+"The blue element ends up too large to fit within the remaining space. Remember that floated elements take up as much space as they need for the content when you set a specific width."
+
+6.
+- padding causes the blue box to overflow to a new row
+- set 'box-sizing: border-box' on <p> elems to fix
+
+p {
+  width: 80%;
+  box-sizing: border-box;
+}

@@ -1,0 +1,107 @@
+/*reset all margins and padding*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  color: gray;
+  font: 16px/32px Helvetica, Arial, sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+section {
+  width: 78%;
+  margin: 8px auto;
+  padding: 20px;
+  border: 2px solid gray;
+}
+
+h1, h3, h5 {
+  margin: 20px 0;
+  color: darkred;
+}
+h1 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.3rem;
+}
+h5 {
+  font-size: 1.0rem;
+}
+
+.example {
+  width: 68%;
+  margin: 44px;
+  border: 2px dashed black;
+  padding: 24px;
+}
+
+.two a {
+  margin: 30px;
+}
+
+.three a {
+  margin: 0;
+  padding: 31px;
+}
+
+.three a,
+.four a {
+  color: white;
+  background-color: green;
+}
+
+/*margins, padding, heights, and widths.*/
+.four a {
+  margin: 20px;
+  padding: 18px 30px;
+  height: auto;
+  width: 120px;
+  border: 3px solid darkgreen;
+  float: left;
+  text-align: center; /*does nothing*/
+}
+.four a + a { /*all 'a's except the 1st one*/
+  margin-left: 10px;
+}
+
+.four {
+  overflow: hidden;
+}
+
+.block-example {
+  margin: 20px 0;
+  line-height: 20px;
+  color: white;
+}
+
+.eleven {
+  background-color: blue;
+}
+
+.twelve {
+  height: 60px;
+  background-color: green;
+}
+
+.thirteen {
+  width: 90px;
+  background-color: red;
+}
+
+.fourteen {
+  width: 180px;
+  height: 120px;
+  background-color: pink;
+}
+
+.twelve,
+.fourteen {
+  padding: 20px;
+  margin: 20px;
+}

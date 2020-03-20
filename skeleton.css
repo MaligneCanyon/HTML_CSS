@@ -12,3 +12,10 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+
+/*reset all margins and padding*/
+* {
+  margin: 0;
+  padding: 0;
+}

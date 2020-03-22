@@ -16,25 +16,39 @@ html {
 section {
   width: 78%;
   margin: 8px auto;
-  padding: 20px;
+  padding: 20px 20px 50px;
   border: 2px solid gray;
+  position: relative; /*for the last ('.abs_pos') example*/
 }
 
-h1, h3, h5 {
-  margin: 20px 0;
+h1, h2, h3, h4, h5 {
   color: darkred;
 }
-h1 {
+h1, h2, h3 {
+  margin: 20px 0;
+}
+h1, h2 {
   font-size: 1.5rem;
 }
-h3 {
+h3, h4 {
   font-size: 1.3rem;
 }
+h4 {
+  margin-top: 30px;
+}
 h5 {
+  /*margin-top: 20px;*/
+  margin: 20px 0;
   font-size: 1.0rem;
 }
+h2 {
+  border-top: 2px dashed black;
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 50px;
+}
 
-.example {
+.inline-example {
   width: 68%;
   margin: 44px;
   border: 2px dashed black;
@@ -56,15 +70,14 @@ h5 {
   background-color: green;
 }
 
-/*margins, padding, heights, and widths.*/
-.four a {
+.four a { /*margins, padding, heights, and widths.*/
   margin: 20px;
   padding: 18px 30px;
   height: auto;
   width: 120px;
   border: 3px solid darkgreen;
   float: left;
-  text-align: center; /*does nothing*/
+  text-align: center; /*does little if content overflows the content area*/
 }
 .four a + a { /*all 'a's except the 1st one*/
   margin-left: 10px;
@@ -79,13 +92,15 @@ h5 {
   line-height: 20px;
   color: white;
 }
-
+*/
 .eleven {
   background-color: blue;
 }
 
 .twelve {
   height: 60px;
+  padding: 20px;
+  margin: 20px;
   background-color: green;
 }
 
@@ -104,4 +119,146 @@ h5 {
 .fourteen {
   padding: 20px;
   margin: 20px;
+}
+
+.floated-left {
+  float: left;
+  background-color: blue;
+}
+
+.floated-right {
+  float: right;
+  background-color: darkred;
+}
+
+.fifteen,
+.sixteen {
+  margin: 10px 0 40px;
+  overflow: hidden;
+}
+
+.fifteen > div,
+.sixteen > div {
+  border: 1px solid red;
+}
+
+.sixteen > div {
+  padding: 25px;
+  text-align: center;
+}
+.sixteen > div:first-of-type {
+  background-color: darkred;
+  width: 40%;
+}
+.sixteen > div:last-of-type {
+  background-color: blue;
+  width: 50%;
+}
+
+.seventeen {
+  margin-bottom: 36px;
+}
+.seventeen > a {
+  background-color: blue;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+nav {
+  margin: 0 auto;
+  padding: 40px 80px;
+}
+.twentyone > a {
+  width: 180px;
+  color: white;
+  background-color: blue;
+  display: inline-block;
+  text-align: center;
+  padding: 15px 0;
+  margin: 8px;
+}
+
+.box {
+  padding: 40px;
+  margin: 0px;
+  color: white;
+  line-height: 20px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+.box1 {
+  float: left;
+  width: 47%;
+  background-color: red;
+}
+.box2 {
+  float: left;
+  width: 53%;
+  background-color: blue;
+}
+.box3 {
+  clear: both;
+  padding: 16px;
+  margin-bottom: 40px;
+  width: 100%;
+  background-color: green;
+}
+
+pre {
+  line-height: 18px;
+  margin: 10px 0;
+}
+
+ul {
+  font-style: italic;
+  margin: 20px;
+  padding-left: 60px;
+}
+ul li {
+  line-height: 30px;
+}
+
+.fixed_pos {
+  width: 225px;
+  padding: 25px 60px;
+  position: fixed;
+  bottom: 50px;
+  left: 35px;
+  border-radius: 10px;
+  background-color: blue;
+  z-index: 16;
+}
+
+p + p {
+  margin-top: 30px;
+}
+
+.rel_pos {
+  width: 325px;
+  padding: 25px 60px;
+  margin: 30px 0;
+  position: relative;
+  top: 50px;
+  right: 88px;
+  border-radius: 10px;
+  background-color: red;
+  z-index: 32;
+}
+
+.abs_pos {
+  width: 200px;
+  padding: 25px 40px;
+  position: absolute;
+  bottom: 155px;
+  left: 250px;
+  border-radius: 10px;
+  background-color: green;
+}
+
+.shallow > * {
+  z-index: 64;
+  position: relative;
 }

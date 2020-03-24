@@ -1,0 +1,97 @@
+* { /*step2*/
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: white; /*step2*/
+  color: black; /*step2*/
+  font: normal 24px Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  /*background-color: blue; step3*/
+  color: white;
+}
+
+header {
+  padding: 1rem;
+  text-align: center;
+  background-color: blue; /*step3*/
+}
+
+nav {
+  background-color: cyan;
+}
+
+ul {
+  list-style-type: none;
+  display: flex; /*step4*/
+  justify-content: space-around; /*step4*/ /*not sure if this is really needed*/
+}
+
+li {
+  text-align: center;
+  width: 20%;
+}
+
+a {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 1rem 0;
+  text-decoration: none;
+  width: 100%;
+}
+
+a:focus,
+a:hover {
+  background-color: blue;
+  color: yellow;
+}
+
+main {
+  display: flex; /*step5*/
+}
+
+article,
+aside {
+  padding: 0 1rem;
+}
+
+article {
+  flex: 2; /*step5*/
+}
+
+aside {
+  background-color: lightgreen;
+  flex: 1; /*step5*/
+}
+
+p {
+  margin: 1rem 0;
+}
+
+footer {
+  background-color: yellow;
+  display: flex; /*step6*/
+  justify-content: space-between; /*step6; push the container content to its l & r edges*/
+}
+
+#copyright {
+  margin: 0 1rem;
+  display: flex; /*step8*/
+}
+
+#copyright p { /*step6*/
+  margin: auto; /*step8*/
+}
+
+#logo {
+  background-color: orange;
+  order: -1; /*step7*/
+}
+
+img {
+  height: 200px; /*step6*/
+  display: flex; /*step6; get rid of the line below the img*/
+}

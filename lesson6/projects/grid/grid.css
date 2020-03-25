@@ -1,0 +1,129 @@
+* { /*step2*/
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: white; /*step2*/
+  color: black; /*step2*/
+  font: normal 24px Helvetica, Arial, sans-serif;
+}
+
+/*
+Organize the entire page as a grid of three columns and five lines, with named grid areas. The
+first and last column should each take up 1/4 of the page width, while the central column should
+take up 1/2 the page width. Use fractions, not percentages, to designate these measurements. The
+header should be on the top line, followed by the navigation bar. The content area consists of
+two lines. The first has two aside elements and an article, with the article in the larger center
+column. The next line consists of an article and an aside. Lastly, the footer should appear at the
+bottom of the grid.
+*/
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "aside1 article1 aside2"
+    "aside3 article2 article2"
+    "footer footer footer";
+}
+
+header, h1 {
+  background-color: blue;
+  color: white;
+}
+
+header {
+  padding: 1rem;
+  text-align: center;
+  grid-area: header; /*step4*/
+}
+
+nav {
+  background-color: cyan;
+  grid-area: nav; /*step4*/
+
+}
+
+ul {
+  display: grid; /*step3*/
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /*step3; 'repeat(5, 1fr);' works too*/
+  list-style-type: none;
+}
+
+li {
+  text-align: center;
+  width: auto;
+}
+
+a {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 1rem 0;
+  text-decoration: none;
+  width: 100%;
+}
+
+a:focus,
+a:hover {
+  background-color: blue;
+  color: yellow;
+}
+
+article,
+aside {
+  padding: 0 1rem;
+}
+
+aside {
+  background-color: lightgreen;
+}
+
+#aside-1 {
+  grid-area: aside1; /*step4*/
+}
+#aside-2 {
+  grid-area: aside2; /*step4*/
+}
+#aside-3 {
+  background-color: pink;
+  grid-area: aside3; /*step4*/
+}
+
+#article-1 {
+  grid-area: article1; /*step4*/
+}
+#article-2 {
+  background-color: skyblue;
+  grid-area: article2; /*step4*/
+}
+
+p {
+  margin: 1rem 0;
+}
+
+footer {
+  background-color: yellow;
+  grid-area: footer; /*step5*/
+  display: grid; /*step5*/
+  grid-template-columns: 1fr 3fr; /*step5*/
+  grid-template-areas: "logo copyright"; /*step5*/
+}
+
+#copyright {
+  margin: 0 1rem;
+  grid-area: copyright; /*step5*/
+  align-self: center; /*step7*/
+  justify-self: end; /*step7*/
+}
+
+#logo {
+  background-color: orange;
+  grid-area: logo; /*step5*/
+}
+
+img {
+  display: grid; /*step6*/
+  width: 100%; /*step6*/
+}

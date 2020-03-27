@@ -1,0 +1,19 @@
+/*example media query layout for mobile-first design*/
+
+/* CSS for all cell phones and shared cross-browser CSS */
+
+@media screen and (min-width: 481px) {
+  /* CSS for tablets and larger */
+}
+
+@media screen and (min-width: 961px) {
+  /* CSS for small desktop and laptop screens and larger */
+}
+
+@media screen and (min-width: 1501px) {
+  /* CSS for large laptop and desktop displays */
+}
+
+@media print {
+  /* CSS for printers */
+}

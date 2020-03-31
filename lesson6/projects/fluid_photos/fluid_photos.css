@@ -30,7 +30,7 @@ body {
 
 /*section is a columnar container*/
 section {
-  min-width: 500px;
+  min-width: 600px;
   max-width: 1000px;
   background-color: #2f2f2f; /*darkgray*/
   align-self: flex-start;

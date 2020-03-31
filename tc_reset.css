@@ -1,0 +1,44 @@
+/*
+----------------------------------------
+Tantek Celik's Whitespace Reset
+     Author:    Tantek Celik, Shane Riley
+    Version:    (CC) 2010 Some Rights Reserved - http://creativecommons.org/licenses/by/2.0
+Description:  Resets default styling of browsers to a common base
+----------------------------------------
+*/
+
+/*remove the bullets on ordered and unordered lists*/
+ul, ol { list-style: none; }
+
+/*set all headings and a few other items to use the same font size*/
+h1, h2, h3, h4, h5, h6, pre, code { font-size: 1em; }
+
+/*set the padding and margins on most block elements to 0*/
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote,
+fieldset, input, dl, dt, dd, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+/*remove the border that surrounds images inside links on older browsers; remove the fieldset border*/
+a img, :link img, :visited img, fieldset { border: none; }
+
+/*convert address elements to look like regular text*/
+address { font-style: normal; }
+
+/*set newer HTML elements to 'display: block', in case of an old browser that defaults to inline*/
+header, section, article, nav, footer, hgroup, details, summary, figure, main {
+  display: block;
+}
+
+/*remove garish colors from the mark element*/
+mark {
+  color: inherit;
+  background-color: transparent;
+}
+
+/*remove the bottom border from abbr elements*/
+abbr { border: none; }
+
+/*remove the toggle marker from the summary element*/
+summary::-webkit-details-marker { display: none; }

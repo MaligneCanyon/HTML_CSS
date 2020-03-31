@@ -22,7 +22,7 @@ html {
 }
 
 
-/*container used to center the <section>*/
+/*<body> is a container, used to center the <section>*/
 body {
   display: flex;
   justify-content: center;
@@ -30,25 +30,48 @@ body {
 
 /*section is a columnar container*/
 section {
-  min-width: 500px;
+  /*min-width: 500px;* step2*/
   max-width: 1000px;
   background-color: #2f2f2f; /*darkgray*/
-  align-self: flex-start;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /*display: flex; step6*/
+  /*flex-direction: column; step6*/
+  /*justify-content: center; step6*/
   align-items: center;
+
+  /*step6*/
+  display: grid;
+  grid-template-areas:
+    "header"
+    "figure"
+    "nav";
+  justify-items: center;
+}
+@media (min-width: 1280px) { /*step6*/
+  section {
+    grid-template-areas:
+      "header header"
+      "figure nav";
+    align-items: start;
+    max-width: none;
+    width: 100%; /*hinted at*/
+  }
 }
 
 header {
   margin-top: 2.2rem;
+  grid-area: header; /*step6*/
 }
 
 figure {
   margin: 1rem;
-  /*align-self: center; n/r*/
-  /*justify-self: center; n/r*/
+  justify-self: center; /*n/r?*/
+  grid-area: figure; /*step6*/
+}
+@media (min-width: 1280px) { /*step6*/
+  figure {
+    width: 950px;
+  }
 }
 
 img {
@@ -68,18 +91,49 @@ figcaption {
 
 nav {
   margin: 0.4rem 1rem 2.1rem 1rem;
+  grid-area: nav; /*step6*/
+}
+@media (min-width: 1280px) { /*step6*/
+  nav {
+    margin: 1rem 1.7rem 0 2.2rem;
+  }
 }
 
 ul {
   list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  /*display: flex; step3*/
+  /*flex-direction: row; step3*/
+  /*justify-content: space-between; step3*/
+
+  /*step3*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+@media (min-width: 1280px) { /*step6*/
+  ul {
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+  }
+}
+@media (max-width: 899px) { /*step4*/
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 599px) { /*step5*/
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+li {
+  /*margin-bottom: 15px; step3, n/r due to grid-gap*/
 }
 
 /*select every list item except the 1st one*/
 li + li {
-  margin-left: 30px;
+  /*margin-left: 30px; step3, n/r due to grid-gap*/
 }
 
 /*thumbnail images*/
@@ -87,17 +141,3 @@ li img {
   box-sizing: border-box;
   border: 4px solid white;
 }
-
-/* could use links for the thumbnail images
-a {
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 1rem 0;
-  text-decoration: none;
-  width: 100%;
-}
-
-a:focus,
-a:hover {
-}
-*/

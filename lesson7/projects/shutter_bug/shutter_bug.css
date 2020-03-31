@@ -1,0 +1,17 @@
+@import url("../../../tc_reset.css");
+
+body {
+  font: normal 18px 'Roboto Condensed', sans-serif;
+  background: linear-gradient(to bottom, #d1dbbd, #fcfff5);
+  background-repeat: no-repeat;
+  color: #3e606f;
+}
+
+h1 {
+  padding: 55px 0 25px 110px;
+  background: url("Icon.png") no-repeat;
+  font-size: 36px;
+  line-height: 23px;
+  color: #193441;
+  font-weight: 400;
+}

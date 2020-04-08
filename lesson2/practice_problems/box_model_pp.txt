@@ -46,12 +46,11 @@ vi. yes; the inline-block elem will behave as per an inline elem, since horiz sp
 6.
 - the article will inherit the content-box sizing of its parent unless otherwise spec'd
 - since its width is spec'd at 50%, the additional space needed for its padding and border will exceed the avail width of the div when placed w/ another article of the same type
-- to fix, spec
+- to fix, (for the article) spec
 box-sizing: border-box
 display: inline-block
 
 7.
-- makes no difference ?
-- the 2 articles are still both located w/i the same section
 - from the solution, the whitespace between the 2 lines is perceived as a single char, which takes up space (thus exceeding the 100% width of the section elem)
 - so the articles cannot appear on the same line
+

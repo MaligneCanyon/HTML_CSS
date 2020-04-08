@@ -26,6 +26,6 @@ em {
   color: gray;
 }
 
-#last-paragraph {
+#last-paragraph { /*should use another class instead of an id*/
   text-decoration: underline;
 }

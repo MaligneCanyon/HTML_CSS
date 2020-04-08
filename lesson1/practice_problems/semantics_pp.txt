@@ -8,7 +8,7 @@ depends on context and intent, but likely article; this is a self-contained arti
 article and/or blockquote
 
 4.
-section or div
+section
 
 5.
 aside

@@ -1,0 +1,9 @@
+header {
+  height: 480px;
+}
+
+header h1 {
+  padding-top: 475px;
+  background: url("../images/logo.png") no-repeat;
+  background-position: center;
+}

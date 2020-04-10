@@ -1,0 +1,130 @@
+@import url("whitespace-reset.css");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  padding: 0 40px 40px; /*could use rem*/
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: left;
+  color: black;
+  background-color: #ffd505; /*yellow*/
+}
+
+header {
+  margin: 0 auto 30px;
+  height: 105px;
+  color: white;
+  background-color: #057ec1; /*blue*/
+  border-radius: 0 0 15px 15px;
+}
+header, main {
+  width: 900px;
+}
+
+header h1 {
+  padding: 30px 0 0 24px;
+  font-size: 2.5rem; /*40px;*/
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+main {
+  padding: 25px 25px 40px;
+  margin: 0 auto;
+  background-color: lightgray;
+  position: relative; /*to serve as the position basis for the enlarged <img>*/
+}
+
+h2 {
+  font-size: 2rem; /*32px;*/
+  padding-bottom: 25px;
+}
+
+section {
+  margin-bottom: 16px;
+  overflow: hidden; /*to wrap floated elems*/
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+label figure {
+  padding: 15px;
+  margin-left: 16px;
+  height: 235px;
+  width: 200px;
+  background-color: white;
+  float: left;
+}
+label:first-of-type figure {
+  margin-left: 0;
+}
+
+figure img {
+  height: 140px;
+  /*width: auto; n/r*/
+  margin: 0 auto;
+  display: block;
+}
+
+figure figcaption:first-of-type {
+  font-size: 1.1875rem; /*19px;*/
+  font-weight: bold;
+  padding: 19px 0 5px 0;
+}
+figure figcaption:last-of-type {
+  font-size: 1rem; /*16px;*/
+}
+
+input {
+  display: none;
+}
+
+input:checked + figure img {
+  height: 310px;
+  position: absolute;
+  z-index: 2;
+
+  /*center w/i the <main> elem*/
+  left: 20%;
+  right: 20%;
+  top: 20%;
+  bottom: 20%;
+}
+
+/*
+add the original <img> height to the padding to keep the <figcaption> elems
+from moving up when the <img> is enlarged
+*/
+input:checked + figure figcaption:first-of-type {
+  padding-top: 159px;
+}
+
+/*create a pseudo elem to overlay the main window when an <img> is enlarged*/
+/*
+  because the pseudo elem is on the <figure>, which is w/i the <label>, when
+  we click on the pseudo elem, we are toggling the <input> checkbox, which
+  restores the original <img> size
+*/
+input:checked + figure::before {
+  position: fixed; /*don't move the pseudo elem if the page is scrolled*/
+
+  /*stretch the pseudo elem to fill the window*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1; /*overlay the entire window*/
+  content: ""; /*an empty elem*/
+  background-color: rgba(0, 0, 0, 0.4); /*translucent black*/
+}

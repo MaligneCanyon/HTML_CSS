@@ -7,7 +7,7 @@
     <!-- internal css -->
     <style>
       /*resets*/
-      /*textarea,*/
+      textarea,
       input {
         display: inline-block;
       }
@@ -18,7 +18,7 @@
         box-sizing: inherit;
         margin: 0; /*start clean*/
         padding: 0; /*start clean*/
-        /*no need to worry about indentation if you start clean !*/
+        /*no need to worry about indentation if you start clean*/
       }
       fieldset {
         margin: 0 auto; /*r&l auto margin horiz'ly centers the fieldset*/
@@ -79,7 +79,7 @@
         input[type="email"],
         input[type="number"],
         textarea {
-      although it complicates the styling of 'select'
+      although doing so complicates the styling of 'select'
       */
       .std {
         box-sizing: border-box; /*no horiz scroll bar when using 'width: 100%'*/
@@ -113,10 +113,10 @@
       .ten {
         width: 10%;
       }
-      .left {
+      .leftpad {
         padding-left: 5px;
       }
-      .right {
+      .rightpad {
         padding-right: 5px;
       }
     </style>
@@ -126,11 +126,11 @@
     <!-- <form action="#" method="get"> --> <!-- for testing only -->
     <form action="#" method="post">
       <fieldset>
-        <dl class="partial fifty right">
+        <dl class="partial fifty rightpad">
           <dt><label for="fname">First Name</label></dt>
           <dd><input class="std" type="text" name="fname" id="fname" required /></dd>
         </dl><!--
-        --><dl class="partial fifty left">
+        --><dl class="partial fifty leftpad">
           <dt><label for="lname">Last Name</label></dt>
           <dd><input class="std" type="text" name="lname" id="lname" required /></dd>
         </dl>
@@ -141,11 +141,11 @@
             <!-- autocapitalize="none" autocomplete="off" autocorrect="off" /></dd> -->
         </dl>
 
-        <dl class="partial fifty right">
+        <dl class="partial fifty rightpad">
           <dt><label for="city">City</label></dt>
           <dd><input class="std" type="text" name="city" id="city" required /></dd>
         </dl><!--
-        --><dl class="partial ten left right">
+        --><dl class="partial ten leftpad rightpad">
           <dt><label for="state">State</label></dt>
           <dd>
             <select class="std" name="state" id="state" required>
@@ -204,7 +204,7 @@
             </select>
           </dd>
         </dl><!--
-        --><dl class="partial forty left">
+        --><dl class="partial forty leftpad">
           <dt><label for="zipcode">Zip Code</label></dt>
           <!--
           <dd><input class="std" type="number" name="zipcode" id="zipcode" min="10000" max="99999" placeholder="#####" required /></dd>

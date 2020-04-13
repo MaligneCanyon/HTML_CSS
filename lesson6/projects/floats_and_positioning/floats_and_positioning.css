@@ -16,22 +16,33 @@ html {
 main {
   width: 1000px;
   margin: 8px auto;
-  padding: 20px 20px 50px;
+  padding: 20px 20px 40px;
   border: 2px solid gray;
 }
 
 section:last-of-type {
-  position: relative; /*for the last ('.abs_pos') example*/
+  position: relative; /*ref position for the last ('.abs_pos') example*/
 }
 
 h1, h2, h3, h4, h5 {
   color: darkred;
 }
+
 h1 {
-  margin: 18px 0 19px;
+  margin: 18px 0;
 }
 h2, h3 {
-  margin: 23px 0 17px;
+  margin: 16px 0;
+}
+h4 {
+  margin-top: 26px;
+}
+h5 {
+  margin: 9px 0 14px;
+}
+h5:nth-of-type(2),
+h5:nth-of-type(3) {
+  margin-top: 13px;
 }
 
 h1, h2 {
@@ -40,41 +51,45 @@ h1, h2 {
 h3, h4 {
   font-size: 1.3rem;
 }
-h4 {
-  margin-top: 30px;
-}
 h5 {
-  /*margin-top: 20px;*/
-  margin: 20px 0;
   font-size: 1.0rem;
 }
+
 h2 {
   border-top: 2px dashed black;
   text-align: center;
-  padding-top: 30px;
+  padding: 28px 0 3px;
   margin-top: 50px;
+}
+
+p {
+  /*line height will influence padding/margin for all <p> elems; necessary to */
+  /*ctrl spacing w/i multi-line paragraphs*/
+  line-height: 35px;
+  padding-bottom: 5px;
 }
 
 .inline-example {
   width: 650px;
-  margin: 47px 45px 41px;
+  margin: 40px 45px 41px;
   border: 2px dashed black;
-  padding: 23px 30px 24px;
+  padding: 22px 30px;
 }
 h3 + .inline-example {
   margin-top: 41px;
 }
 
 .two a {
-  margin: 30px;
+  margin: 30px; /*specified*/
 }
+
 .two, .three, .four {
-  margin-bottom: 46px;
+  margin-bottom: 45px;
 }
 
 .three a {
   margin: 0;
-  padding: 30px;
+  padding: 30px; /*specified*/
 }
 
 .three a,
@@ -87,8 +102,10 @@ h3 + .inline-example {
   overflow: hidden;
 }
 .four a { /*margins, padding, heights, and widths.*/
-  margin: 22px 15px;
-  padding: 18px 30px 19px;
+  margin: 23px 15px 22px;
+  /*l&r padding ignored if 'text-align: center' is used and content fits inside content area*/
+  /*padding: 18px 30px 19px;*/
+  padding: 17px 20px;
   height: auto;
   width: 120px;
   border: 3px solid darkgreen;
@@ -98,10 +115,13 @@ h3 + .inline-example {
 .four a + a { /*all <a>s except the 1st one*/
   margin-left: 15px;
 }
+.four {
+  padding-bottom: 23px;
+}
 
 .block-example {
-  margin: 20px 0;
-  line-height: 20px;
+  margin: 20px 0 16px;
+  line-height: 19px;
   color: white;
 }
 
@@ -110,14 +130,13 @@ h3 + .inline-example {
 }
 
 .twelve {
-  height: 60px;
-  padding: 20px;
-  margin: 20px;
+  height: 60px; /*specified*/
   background-color: green;
 }
 
 .thirteen {
   width: 90px;
+  letter-spacing: .025rem;
   background-color: red;
 }
 
@@ -129,8 +148,8 @@ h3 + .inline-example {
 
 .twelve,
 .fourteen {
-  padding: 20px;
-  margin: 20px;
+  padding: 20px; /*specified*/
+  margin: 20px; /*specified*/
 }
 
 .floated-left {
@@ -145,17 +164,17 @@ h3 + .inline-example {
 
 .fifteen,
 .sixteen {
-  margin: 10px 0 40px;
+  margin: 10px 0 35px;
   overflow: hidden;
 }
 
-.fifteen > div,
-.sixteen > div {
+.fifteen > div {
   border: 1px solid red;
 }
 
 .sixteen > div {
-  padding: 25px;
+  padding: 26px;
+  height: 70px;
   text-align: center;
 }
 .sixteen > div:first-of-type {
@@ -168,7 +187,7 @@ h3 + .inline-example {
 }
 
 .seventeen {
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
 .seventeen > a {
   background-color: blue;
@@ -180,7 +199,7 @@ h3 + .inline-example {
 
 nav {
   margin: 0 auto;
-  padding: 40px 80px;
+  padding: 40px 79px;
 }
 .twentyone > a {
   width: 180px;
@@ -189,7 +208,7 @@ nav {
   display: inline-block;
   text-align: center;
   padding: 15px 0;
-  margin: 8px;
+  margin: 0 8px;
 }
 
 .box {
@@ -198,7 +217,7 @@ nav {
   color: white;
   line-height: 20px;
   font-weight: bold;
-  display: block;
+  /*display: block; autom for floated elems*/
   text-align: center;
 }
 .box1 {
@@ -207,67 +226,74 @@ nav {
   background-color: red;
 }
 .box2 {
-  float: left;
+  float: right;
   width: 53%;
   background-color: blue;
 }
 .box3 {
   clear: both;
-  padding: 16px;
-  margin-bottom: 40px;
+  padding: 15px;
+  margin-bottom: 35px;
   width: 100%;
   background-color: green;
 }
 
+p + p {
+  margin-top: 20px;
+}
+
 pre {
-  line-height: 18px;
-  margin: 10px 0;
+  line-height: 19px;
+}
+.pretext {
+  margin: 37px 0;
 }
 
 ul {
   font-style: italic;
-  margin: 20px;
-  padding-left: 60px;
+  padding: 15px 80px 20px;
 }
 ul li {
-  line-height: 30px;
+  line-height: 29px;
 }
 
 .fixed_pos {
   width: 225px;
-  padding: 24px 60px;
+  padding: 26px 60px;
   position: fixed;
   bottom: 50px;
   left: 35px;
-  border-radius: 10px;
   background-color: blue;
   z-index: 16;
 }
 
-p + p {
-  margin-top: 30px;
-}
-
 .rel_pos {
   width: 325px;
-  padding: 25px 60px;
-  margin: 30px 0;
+  padding: 26px 60px;
+  margin: 25px 0 24px;
   position: relative;
-  top: 50px;
-  right: 88px;
-  border-radius: 10px;
+  top: 39px;
+  right: 90px;
   background-color: red;
   z-index: 32;
 }
 
 .abs_pos {
   width: 200px;
-  padding: 25px 40px;
+  padding: 26px 40px;
   position: absolute;
-  bottom: 110px;
+  bottom: 121px;
   left: 230px;
-  border-radius: 10px;
   background-color: green;
+  z-index: 128;
+}
+
+.fixed_pos,
+.rel_pos,
+.abs_pos {
+  font-weight: normal;
+  line-height: 18px;
+  border-radius: 10px;
 }
 
 .shallow > * {

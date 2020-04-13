@@ -50,11 +50,6 @@
           <a>Portfolio</a>
           <a>Contact</a>
         </p>
-
-
-
-
-<!-- need to chg line-height -->
         <p>
           Floating an inline element changes its display value to block, which makes it subject to all block-level characteristics. Thus, floated inline elements can take margins, padding, heights, and widths.
         </p>
@@ -171,17 +166,15 @@
         <p>
           There are other ways to clear floats. One technique is the <b>clearfix</b> method:
         </p>
-        <p>
+        <div class="pretext">
           <pre>
-            <code>
-              elementName::after {
-                content: " ";
-                display:block;
-                clear: both;
-              }
-            </code>
+            elementName::after {
+              content: "";
+              display:block;
+              clear: both;
+            }
           </pre>
-        </p>
+        </div>
         <p>
           Here we append the <code>::after</code> pseudo-element to the parent element's selector.
         </p>

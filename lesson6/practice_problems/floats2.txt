@@ -1,9 +1,9 @@
 1.
--chg the CSS for the div's 'id'; there is no div CSS to alter directly
+- chg the CSS for the div's 'id'; there is no div CSS to alter directly
 
 #floated {
-    float: left;
-    background: #ecaa33;
+  float: left;
+  background: #ecaa33;
 }
 .
 
@@ -12,9 +12,9 @@
 - add 'clear: both' to the main <p> elem to force it to appear below the div
 
 main > p {
-    padding: 1em;
-    margin: 0;
-    clear: both;
+  padding: 1em;
+  margin: 0;
+  clear: both;
 }
 
 
@@ -22,9 +22,9 @@ main > p {
 - set the width in the div's 'id' to 100%
 
 #floated {
-    width: 100%
-    float: left;
-    background: #ecaa33;
+  width: 100%
+  float: left;
+  background: #ecaa33;
 }
 
 

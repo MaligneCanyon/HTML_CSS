@@ -13,20 +13,27 @@ html {
   box-sizing: inherit;
 }
 
-section {
-  width: 78%;
+main {
+  width: 1000px;
   margin: 8px auto;
   padding: 20px 20px 50px;
   border: 2px solid gray;
+}
+
+section:last-of-type {
   position: relative; /*for the last ('.abs_pos') example*/
 }
 
 h1, h2, h3, h4, h5 {
   color: darkred;
 }
-h1, h2, h3 {
-  margin: 20px 0;
+h1 {
+  margin: 18px 0 19px;
 }
+h2, h3 {
+  margin: 23px 0 17px;
+}
+
 h1, h2 {
   font-size: 1.5rem;
 }
@@ -49,19 +56,25 @@ h2 {
 }
 
 .inline-example {
-  width: 68%;
-  margin: 44px;
+  width: 650px;
+  margin: 47px 45px 41px;
   border: 2px dashed black;
-  padding: 24px;
+  padding: 23px 30px 24px;
+}
+h3 + .inline-example {
+  margin-top: 41px;
 }
 
 .two a {
   margin: 30px;
 }
+.two, .three, .four {
+  margin-bottom: 46px;
+}
 
 .three a {
   margin: 0;
-  padding: 31px;
+  padding: 30px;
 }
 
 .three a,
@@ -70,21 +83,20 @@ h2 {
   background-color: green;
 }
 
+.four {
+  overflow: hidden;
+}
 .four a { /*margins, padding, heights, and widths.*/
-  margin: 20px;
-  padding: 18px 30px;
+  margin: 22px 15px;
+  padding: 18px 30px 19px;
   height: auto;
   width: 120px;
   border: 3px solid darkgreen;
   float: left;
   text-align: center; /*does little if content overflows the content area*/
 }
-.four a + a { /*all 'a's except the 1st one*/
-  margin-left: 10px;
-}
-
-.four {
-  overflow: hidden;
+.four a + a { /*all <a>s except the 1st one*/
+  margin-left: 15px;
 }
 
 .block-example {
@@ -92,7 +104,7 @@ h2 {
   line-height: 20px;
   color: white;
 }
-*/
+
 .eleven {
   background-color: blue;
 }
@@ -223,7 +235,7 @@ ul li {
 
 .fixed_pos {
   width: 225px;
-  padding: 25px 60px;
+  padding: 24px 60px;
   position: fixed;
   bottom: 50px;
   left: 35px;
@@ -252,8 +264,8 @@ p + p {
   width: 200px;
   padding: 25px 40px;
   position: absolute;
-  bottom: 155px;
-  left: 250px;
+  bottom: 110px;
+  left: 230px;
   border-radius: 10px;
   background-color: green;
 }

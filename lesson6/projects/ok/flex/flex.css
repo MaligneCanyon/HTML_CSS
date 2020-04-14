@@ -9,15 +9,15 @@ html {
   font: normal 24px Helvetica, Arial, sans-serif;
 }
 
-h1 {
-  /*background-color: blue; step3*/
-  color: white;
-}
-
 header {
   padding: 1rem;
   text-align: center;
   background-color: blue; /*step3*/
+}
+
+h1 {
+  /*background-color: blue; step3*/
+  color: white;
 }
 
 nav {
@@ -27,7 +27,7 @@ nav {
 ul {
   list-style-type: none;
   display: flex; /*step4*/
-  justify-content: space-around; /*step4*/ /*not sure if this is really needed*/
+  /*justify-content: space-around;*/ /*step4; n/r since <li> widths are 20%*/
 }
 
 li {
@@ -51,6 +51,7 @@ a:hover {
 
 main {
   display: flex; /*step5*/
+  /*align-items: stretch;*/ /*step5; default, n/r*/
 }
 
 article,
@@ -82,13 +83,13 @@ footer {
   display: flex; /*step8*/
 }
 
-#copyright p { /*step6*/
-  margin: auto; /*step8*/
+#copyright p {
+  margin: auto; /*step8; 'align-self: center;' works too*/
 }
 
 #logo {
   background-color: orange;
-  order: -1; /*step7*/
+  order: -1; /*step7; display the logo 1st*/
 }
 
 img {

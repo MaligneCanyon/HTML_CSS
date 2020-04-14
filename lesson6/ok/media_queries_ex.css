@@ -1,5 +1,6 @@
 /*example media query layout for mobile-first design*/
 
+
 /* CSS for all cell phones and shared cross-browser CSS */
 
 @media screen and (min-width: 481px) {

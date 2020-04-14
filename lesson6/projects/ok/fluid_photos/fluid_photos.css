@@ -37,7 +37,7 @@ section {
   min-width: 600px;
   max-width: 1000px;
   background-color: #2f2f2f; /*darkgray*/
-  align-self: flex-start;
+  /*align-self: flex-start; no visible effect*/
 
   display: flex;
   flex-direction: column;

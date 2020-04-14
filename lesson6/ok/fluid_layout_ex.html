@@ -4,13 +4,16 @@
   <head>
     <title>Fluid Layout</title>
     <meta charset="utf-8" />
+    <!-- links -->
+    <!-- <link rel="stylesheet" href="filename.css" /> -->
+
     <!-- internal css -->
     <style>
       html {
         font-size: 16px;
       }
 
-      article, p {
+      article, aside, p {
         margin: 0;
         padding: 0;
       }
@@ -23,9 +26,8 @@
       main {
         clear: both;
         overflow: hidden;
-        padding-bottom: 1.5rem;
         max-width: 1000px; /*added*/
-        min-width: 500px; /*added*/
+        min-width: 600px; /*added*/
       }
 
       .content,
@@ -38,7 +40,7 @@
         background-color: pink;
         float: left;
         width: 70%;
-        box-sizing: border-box; /*added*/
+        /*box-sizing: border-box; added, no visible effect*/
       }
 
       .sidebar {

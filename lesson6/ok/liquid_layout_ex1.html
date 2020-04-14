@@ -2,7 +2,7 @@
 
 <html lang="en">
   <head>
-    <title>Liquid Layout 2</title>
+    <title>Liquid Layout 1</title>
     <meta charset="utf-8" />
     <!-- links -->
     <!-- <link rel="stylesheet" href="filename.css" /> -->
@@ -13,7 +13,8 @@
         font-size: 16px;
       }
 
-      body, article, p {
+      /*body, article, p { remove <body>, add the <aside> elem*/
+      article, aside, p {
         margin: 0;
         padding: 0;
       }
@@ -26,29 +27,28 @@
       main {
         clear: both;
         overflow: hidden;
-        padding-bottom: 1.5rem;
+        /*padding-bottom: 1.5rem; no visible effect*/
       }
 
       .content,
       .sidebar {
         box-sizing: border-box;
-        /*float: left;*/
+        float: left;
         padding: 20px 30px;
       }
 
       .content {
         background-color: pink;
-        width: 70%; /*was 70%*/
-        float: left; /*moved*/
+        width: 70%;
       }
 
       .sidebar {
         background-color: cyan;
-        /*width: 30%;*/
-        overflow: hidden; /*added*/
+        width: 30%;
       }
     </style>
   </head>
+
   <body>
     <!-- all visible content -->
     <main>

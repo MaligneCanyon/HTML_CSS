@@ -9,17 +9,7 @@ html {
   font: normal 24px Helvetica, Arial, sans-serif;
 }
 
-/*
-Organize the entire page as a grid of three columns and five lines, with named grid areas. The
-first and last column should each take up 1/4 of the page width, while the central column should
-take up 1/2 the page width. Use fractions, not percentages, to designate these measurements. The
-header should be on the top line, followed by the navigation bar. The content area consists of
-two lines. The first has two aside elements and an article, with the article in the larger center
-column. The next line consists of an article and an aside. Lastly, the footer should appear at the
-bottom of the grid.
-*/
-
-body {
+body { /*step4*/
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-areas:
@@ -44,7 +34,6 @@ header {
 nav {
   background-color: cyan;
   grid-area: nav; /*step4*/
-
 }
 
 ul {
@@ -107,7 +96,7 @@ p {
 
 footer {
   background-color: yellow;
-  grid-area: footer; /*step5*/
+  grid-area: footer; /*step4*/
   display: grid; /*step5*/
   grid-template-columns: 1fr 3fr; /*step5*/
   grid-template-areas: "logo copyright"; /*step5*/
@@ -126,6 +115,6 @@ footer {
 }
 
 img {
-  display: grid; /*step6*/
   width: 100%; /*step6*/
+  display: grid; /*step6; get rid of the line below the img*/
 }

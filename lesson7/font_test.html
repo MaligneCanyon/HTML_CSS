@@ -4,8 +4,49 @@
   <head>
     <title>Font Availablity Test</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="font_test.css" />
+    <style>
+      * {
+        /*outline: 1px solid red;*/
+      }
+
+      body {
+        font-size: 36px;
+        font-style: normal;
+        background-color: #7f7f7f;
+      }
+
+      p {
+        padding: 0 0 10px;
+        margin: 0;
+      }
+
+      p:nth-of-type(1) {
+        font-family: Avenir, Helvetica, Arial, "Courier New", serif; /*test*/
+        color: blue;
+      }
+
+      p:nth-of-type(2) {
+        font-family: Helvetica, Arial, "Courier New", serif; /*test*/
+        color: green;
+      }
+
+      p:nth-of-type(3) {
+        font-family: Arial, "Courier New", serif; /*test*/
+        color: yellow;
+      }
+
+      p:nth-of-type(4) {
+        font-family: "Courier New", serif; /*test*/
+        color: orange;
+      }
+
+      p:nth-of-type(5) {
+        font-family: serif; /*test*/
+        color: darkred;
+      }
+    </style>
   </head>
+
   <body>
     <p>font test #1</p>
     <p>font test #2</p>

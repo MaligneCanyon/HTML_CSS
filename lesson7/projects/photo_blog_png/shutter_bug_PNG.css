@@ -1,4 +1,4 @@
-@import url("whitespace-reset.css");
+@import url("../../../whitespace-reset.css");
 
 * {
   box-sizing: border-box;
@@ -17,23 +17,26 @@ section {
   background-repeat: no-repeat;
 }
 
+header, main, footer {
+  width: 960px; /*measured*/
+  margin: 0 auto; /*horiz centering*/
+}
+
 h1, h2, p {
   font-weight: normal;
 }
 
 header {
-  width: 960px;
-  padding: 20px 20px 0 20px;
-  margin: 0 auto;
+  padding: 20px 20px 0;
   overflow: hidden;
 }
 
 h1 {
-  padding: 50px 0 45px 110px;
+  float: left;
+  padding: 53px 0 42px 110px;
   font-size: 36px;
   color: #193441;
   background: url("logo.png") no-repeat;
-  float: left;
 }
 
 nav {
@@ -41,32 +44,32 @@ nav {
   padding-top: 75px;
 }
 
-li {
+nav li {
   display: inline-block;
-  background-color: white;
-  /*padding: 15px 40px;*/
-  padding: 11px 40px 11px;
-  border-radius: 10px 10px 0 0;
 }
 
-li a {
-  color: #91aa9d;
+nav li a {
+  display: block; /*makes entire link elem clickable*/
   text-decoration: none;
+  text-align: center;
+  width: 127px;
+  padding: 11px 0;
+  margin-left: 2px;
+  color: #91aa9d;
+  border-radius: 10px 10px 0 0;
+  background-color: white;
 }
 
-li.active {
-  background-color: #91aa9d;
-}
-li.active a {
+nav li a.active {
   color: white;
+  background-color: #91aa9d;
 }
 
 main {
+  clear: both; /*clear the floated children of the <header> elem*/
+  overflow: hidden; /*clear the floated Layer2 img*/
+  padding: 30px 30px 45px;
   background-color: white;
-  width: 960px;
-  margin: 0 auto;
-  padding: 30px;
-  overflow: hidden;
   box-shadow: 0px 5px 5px #b5b5b5;
 }
 
@@ -75,7 +78,7 @@ h2 {
   padding: 40px 0 30px;
 }
 
-main p {
+article p {
   padding-bottom: 20px;
 }
 
@@ -85,9 +88,7 @@ figure {
 }
 
 footer {
-  width: 960px;
-  padding: 20px 0 40px;
-  margin: 0 auto;
+  padding: 12px 0 38px;
 }
 
 footer p {

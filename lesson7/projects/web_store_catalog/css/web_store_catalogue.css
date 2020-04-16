@@ -1,4 +1,4 @@
-@import url("whitespace-reset.css");
+@import url("../../../../whitespace-reset.css");
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  padding: 0 40px 40px; /*could use rem*/
+  padding-bottom: 40px; /*could use rem*/
   font-family: Helvetica, Arial, sans-serif;
   text-align: left;
   color: black;
@@ -17,7 +17,7 @@ body {
 }
 
 header {
-  margin: 0 auto 30px;
+  margin: 0 auto 30px; /*center horiz*/
   height: 105px;
   color: white;
   background-color: #057ec1; /*blue*/
@@ -29,7 +29,7 @@ header, main {
 
 header h1 {
   padding: 30px 0 0 24px;
-  font-size: 2.5rem; /*40px;*/
+  font-size: 2.375rem; /*38px;*/
 }
 
 h1, h2 {
@@ -37,10 +37,10 @@ h1, h2 {
 }
 
 main {
-  padding: 25px 25px 40px;
-  margin: 0 auto;
+  padding: 25px 25px 24px;
+  margin: 0 auto; /*center horiz*/
   background-color: lightgray;
-  position: relative; /*to serve as the position basis for the enlarged <img>*/
+  position: relative; /*position basis for the enlarged <img>*/
 }
 
 h2 {
@@ -48,25 +48,23 @@ h2 {
   padding-bottom: 25px;
 }
 
-section {
-  margin-bottom: 16px;
-  overflow: hidden; /*to wrap floated elems*/
+ul {
+  overflow: hidden; /*wrap floated elems*/
 }
 
-section:last-of-type {
-  margin-bottom: 0;
+li {
+  padding: 0 0 16px 16px; /*space btwn <figure> elems*/
+  float: left;
+}
+li:nth-of-type(4n + 1) {
+  padding-left: 0;
 }
 
-label figure {
+figure {
   padding: 15px;
-  margin-left: 16px;
   height: 235px;
   width: 200px;
   background-color: white;
-  float: left;
-}
-label:first-of-type figure {
-  margin-left: 0;
 }
 
 figure img {
@@ -79,7 +77,7 @@ figure img {
 figure figcaption:first-of-type {
   font-size: 1.1875rem; /*19px;*/
   font-weight: bold;
-  padding: 19px 0 5px 0;
+  padding: 19px 0 5px;
 }
 figure figcaption:last-of-type {
   font-size: 1rem; /*16px;*/
@@ -89,7 +87,7 @@ input {
   display: none;
 }
 
-input:checked + figure img {
+input:checked + figure img { /*enlarged <img>*/
   height: 310px;
   position: absolute;
   z-index: 2;
@@ -102,8 +100,8 @@ input:checked + figure img {
 }
 
 /*
-add the original <img> height to the padding to keep the <figcaption> elems
-from moving up when the <img> is enlarged
+  add the original <img> height to the top padding to keep the <figcaption>
+  elems from moving up when the <img> is enlarged
 */
 input:checked + figure figcaption:first-of-type {
   padding-top: 159px;
@@ -115,7 +113,7 @@ input:checked + figure figcaption:first-of-type {
   we click on the pseudo elem, we are toggling the <input> checkbox, which
   restores the original <img> size
 */
-input:checked + figure::before {
+input:checked + figure::before { /*pseudo elem*/
   position: fixed; /*don't move the pseudo elem if the page is scrolled*/
 
   /*stretch the pseudo elem to fill the window*/

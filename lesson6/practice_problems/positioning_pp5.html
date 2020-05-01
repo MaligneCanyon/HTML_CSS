@@ -26,6 +26,7 @@
         /*left: 33.3%;*/ /*pp3; this works if the viewport is 1200px wide*/
         left: 50%; /*pp3; position the left edge midway ...*/
         margin-left: -200px; /* pp3; ... then move the elem half of its width to the left*/
+        box-sizing: border-box; /*pp3 don't forget to account for padding*/
         /*top: 0; pp5*/
         top: 40px; /*pp5*/
         z-index: 4; /*pp4*/
@@ -39,7 +40,7 @@
         background-color: rgba(0, 0, 0, .6);
         z-index: 2;
       }
-      .positioned span {
+      .positioned span { /*pp5*/
         position: absolute;
         top: -10px;
         left: -10px;

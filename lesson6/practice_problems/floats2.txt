@@ -1,25 +1,27 @@
+despite what its url implies, the link for the floats2 pp set is
+https://d3jtzah944tvom.cloudfront.net/lesson_4/exercises_floating_positioning/float1.html
+
 1.
-- chg the CSS for the div's 'id'; there is no div CSS to alter directly
+- chg the CSS for the #floated selector; there is no div CSS to alter directly
 
 #floated {
   float: left;
   background: #ecaa33;
 }
-.
+
 
 2.
 - since the div is floated, it is removed from the normal doc flow
 - add 'clear: both' to the main <p> elem to force it to appear below the div
 
 main > p {
-  padding: 1em;
-  margin: 0;
+  background: #18aaff;
   clear: both;
 }
 
 
 3.
-- set the width in the div's 'id' to 100%
+- set the width in the div's 'id' selector to 100%
 
 #floated {
   width: 100%
@@ -52,11 +54,14 @@ main > p {
 - from the solution
 "The blue element ends up too large to fit within the remaining space. Remember that floated elements take up as much space as they need for the content when you set a specific width."
 
+
 6.
 - padding causes the blue box to overflow to a new row
 - set 'box-sizing: border-box' on <p> elems to fix
 
 p {
-  width: 80%;
+  padding: 1em;
+  margin: 0;
   box-sizing: border-box;
 }
+

@@ -1,4 +1,4 @@
-@import url("../../../whitespace-reset.css");
+@import url("../../../../whitespace-reset.css");
 
 * {
   box-sizing: border-box;
@@ -74,11 +74,13 @@ section:nth-of-type(2) p {
 }
 
 footer {
+  padding-top: 2px;
   margin-bottom: 145px;
   background-color: #e7e7e7; /*lightgray*/
 }
 
 ul {
+  list-style-type: none;
   height: 120px; /*req'd for vert spacing*/
   padding: 0 180px;
   display: flex;
